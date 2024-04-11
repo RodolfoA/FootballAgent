@@ -23,6 +23,10 @@
 		354B5DF42BC8764A0037CE61 /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5DF32BC8764A0037CE61 /* PlayersView.swift */; };
 		354B5DF62BC876640037CE61 /* CareerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5DF52BC876640037CE61 /* CareerView.swift */; };
 		354B5DF82BC876780037CE61 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5DF72BC876780037CE61 /* SettingsView.swift */; };
+		354B5DFC2BC879170037CE61 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5DFB2BC879170037CE61 /* Rating.swift */; };
+		354B5DFE2BC87BCE0037CE61 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5DFD2BC87BCD0037CE61 /* Agent.swift */; };
+		354B5E002BC880100037CE61 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5DFF2BC880100037CE61 /* Skill.swift */; };
+		354B5E022BC886440037CE61 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5E012BC886440037CE61 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,10 @@
 		354B5DF32BC8764A0037CE61 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		354B5DF52BC876640037CE61 /* CareerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerView.swift; sourceTree = "<group>"; };
 		354B5DF72BC876780037CE61 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		354B5DFB2BC879170037CE61 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		354B5DFD2BC87BCD0037CE61 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
+		354B5DFF2BC880100037CE61 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
+		354B5E012BC886440037CE61 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,7 @@
 			children = (
 				354B5DB62BC864810037CE61 /* FootballAgentApp.swift */,
 				354B5DF02BC8710E0037CE61 /* Views */,
+				354B5DFA2BC878F10037CE61 /* Data */,
 				354B5DBA2BC864810037CE61 /* Item.swift */,
 				354B5DBC2BC864820037CE61 /* Assets.xcassets */,
 				354B5DC12BC864820037CE61 /* FootballAgent.entitlements */,
@@ -161,6 +170,17 @@
 				354B5DF72BC876780037CE61 /* SettingsView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		354B5DFA2BC878F10037CE61 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				354B5DFB2BC879170037CE61 /* Rating.swift */,
+				354B5DFF2BC880100037CE61 /* Skill.swift */,
+				354B5DFD2BC87BCD0037CE61 /* Agent.swift */,
+				354B5E012BC886440037CE61 /* Player.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,8 +348,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354B5E022BC886440037CE61 /* Player.swift in Sources */,
+				354B5DFC2BC879170037CE61 /* Rating.swift in Sources */,
 				354B5DF82BC876780037CE61 /* SettingsView.swift in Sources */,
 				354B5DF42BC8764A0037CE61 /* PlayersView.swift in Sources */,
+				354B5E002BC880100037CE61 /* Skill.swift in Sources */,
+				354B5DFE2BC87BCE0037CE61 /* Agent.swift in Sources */,
 				354B5DB92BC864810037CE61 /* ContentView.swift in Sources */,
 				354B5DF22BC8722D0037CE61 /* HomeView.swift in Sources */,
 				354B5DBB2BC864810037CE61 /* Item.swift in Sources */,
