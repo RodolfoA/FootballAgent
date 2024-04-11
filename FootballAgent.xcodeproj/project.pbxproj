@@ -15,6 +15,10 @@
 		354B5DCC2BC864820037CE61 /* FootballAgentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5DCB2BC864820037CE61 /* FootballAgentTests.swift */; };
 		354B5DD62BC864820037CE61 /* FootballAgentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5DD52BC864820037CE61 /* FootballAgentUITests.swift */; };
 		354B5DD82BC864820037CE61 /* FootballAgentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5DD72BC864820037CE61 /* FootballAgentUITestsLaunchTests.swift */; };
+		354B5DE52BC8656B0037CE61 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 354B5DE42BC8656B0037CE61 /* GoogleService-Info.plist */; };
+		354B5DE82BC865C90037CE61 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 354B5DE72BC865C90037CE61 /* FirebaseAnalytics */; };
+		354B5DEA2BC865C90037CE61 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 354B5DE92BC865C90037CE61 /* FirebaseAnalyticsSwift */; };
+		354B5DEC2BC865C90037CE61 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 354B5DEB2BC865C90037CE61 /* FirebaseCrashlytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,7 @@
 		354B5DD12BC864820037CE61 /* FootballAgentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballAgentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		354B5DD52BC864820037CE61 /* FootballAgentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAgentUITests.swift; sourceTree = "<group>"; };
 		354B5DD72BC864820037CE61 /* FootballAgentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballAgentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		354B5DE42BC8656B0037CE61 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354B5DEC2BC865C90037CE61 /* FirebaseCrashlytics in Frameworks */,
+				354B5DEA2BC865C90037CE61 /* FirebaseAnalyticsSwift in Frameworks */,
+				354B5DE82BC865C90037CE61 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +112,7 @@
 				354B5DBC2BC864820037CE61 /* Assets.xcassets */,
 				354B5DC12BC864820037CE61 /* FootballAgent.entitlements */,
 				354B5DC22BC864820037CE61 /* Info.plist */,
+				354B5DE42BC8656B0037CE61 /* GoogleService-Info.plist */,
 				354B5DBE2BC864820037CE61 /* Preview Content */,
 			);
 			path = FootballAgent;
@@ -144,12 +153,18 @@
 				354B5DAF2BC864810037CE61 /* Sources */,
 				354B5DB02BC864810037CE61 /* Frameworks */,
 				354B5DB12BC864810037CE61 /* Resources */,
+				354B5DED2BC868650037CE61 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FootballAgent;
+			packageProductDependencies = (
+				354B5DE72BC865C90037CE61 /* FirebaseAnalytics */,
+				354B5DE92BC865C90037CE61 /* FirebaseAnalyticsSwift */,
+				354B5DEB2BC865C90037CE61 /* FirebaseCrashlytics */,
+			);
 			productName = FootballAgent;
 			productReference = 354B5DB32BC864810037CE61 /* FootballAgent.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +237,9 @@
 				Base,
 			);
 			mainGroup = 354B5DAA2BC864810037CE61;
+			packageReferences = (
+				354B5DE62BC865C90037CE61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 354B5DB42BC864810037CE61 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,6 +258,7 @@
 			files = (
 				354B5DC02BC864820037CE61 /* Preview Assets.xcassets in Resources */,
 				354B5DBD2BC864820037CE61 /* Assets.xcassets in Resources */,
+				354B5DE52BC8656B0037CE61 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +277,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		354B5DED2BC868650037CE61 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		354B5DAF2BC864810037CE61 /* Sources */ = {
@@ -430,11 +474,14 @@
 				CODE_SIGN_ENTITLEMENTS = FootballAgent/FootballAgent.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"FootballAgent/Preview Content\"";
 				DEVELOPMENT_TEAM = HE664BQ32P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FootballAgent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Football Agent";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.simulation-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -466,6 +513,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FootballAgent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Football Agent";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.simulation-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -600,6 +649,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		354B5DE62BC865C90037CE61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		354B5DE72BC865C90037CE61 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 354B5DE62BC865C90037CE61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		354B5DE92BC865C90037CE61 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 354B5DE62BC865C90037CE61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		354B5DEB2BC865C90037CE61 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 354B5DE62BC865C90037CE61 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 354B5DAB2BC864810037CE61 /* Project object */;
 }
