@@ -7,12 +7,14 @@
 
 import Foundation
 
-class Player : HasSkills {
+class Player : HasSkills, Identifiable {
     var name : String = ""
     var nationality : String = ""
     var reputation : Int = 0
     var money : Double = 0.0
-    var bornDate: Date = Date()
+    var bornDate : Date = Date()
+    var imageName : String = "person"
+    var position : Position = .Striker
     
     override init() {
         super.init()

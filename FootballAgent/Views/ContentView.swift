@@ -11,8 +11,16 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
+    @State private var shouldCreateAgent = GameState.shared.agent == nil
 
     var body: some View {
+        VStack {}
+        .sheet(isPresented: $shouldCreateAgent) {
+            
+        } content: {
+            CreateAgent()
+        }
+        
         TabView() {
             HomeView().tabItem { Text("Home")
                 Image(systemName: "house") }.tag(1)

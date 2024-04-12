@@ -27,6 +27,12 @@
 		354B5DFE2BC87BCE0037CE61 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5DFD2BC87BCD0037CE61 /* Agent.swift */; };
 		354B5E002BC880100037CE61 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5DFF2BC880100037CE61 /* Skill.swift */; };
 		354B5E022BC886440037CE61 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5E012BC886440037CE61 /* Player.swift */; };
+		354B5E052BC9A9F60037CE61 /* PlayerResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5E042BC9A9F60037CE61 /* PlayerResume.swift */; };
+		354B5E072BC9ABAE0037CE61 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5E062BC9ABAE0037CE61 /* Position.swift */; };
+		354B5E0A2BC9B37C0037CE61 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5E092BC9B37C0037CE61 /* PlayerViewModel.swift */; };
+		354B5E0C2BC9C9770037CE61 /* PlayerImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 354B5E0B2BC9C9770037CE61 /* PlayerImages.xcassets */; };
+		354B5E0E2BC9CCE90037CE61 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5E0D2BC9CCE90037CE61 /* GameState.swift */; };
+		354B5E102BC9CED90037CE61 /* CreateAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354B5E0F2BC9CED90037CE61 /* CreateAgent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,12 @@
 		354B5DFD2BC87BCD0037CE61 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		354B5DFF2BC880100037CE61 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		354B5E012BC886440037CE61 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		354B5E042BC9A9F60037CE61 /* PlayerResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerResume.swift; sourceTree = "<group>"; };
+		354B5E062BC9ABAE0037CE61 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		354B5E092BC9B37C0037CE61 /* PlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		354B5E0B2BC9C9770037CE61 /* PlayerImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PlayerImages.xcassets; sourceTree = "<group>"; };
+		354B5E0D2BC9CCE90037CE61 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		354B5E0F2BC9CED90037CE61 /* CreateAgent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAgent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,9 +136,11 @@
 			children = (
 				354B5DB62BC864810037CE61 /* FootballAgentApp.swift */,
 				354B5DF02BC8710E0037CE61 /* Views */,
-				354B5DFA2BC878F10037CE61 /* Data */,
+				354B5E082BC9B3590037CE61 /* View Models */,
+				354B5DFA2BC878F10037CE61 /* Models */,
 				354B5DBA2BC864810037CE61 /* Item.swift */,
 				354B5DBC2BC864820037CE61 /* Assets.xcassets */,
+				354B5E0B2BC9C9770037CE61 /* PlayerImages.xcassets */,
 				354B5DC12BC864820037CE61 /* FootballAgent.entitlements */,
 				354B5DC22BC864820037CE61 /* Info.plist */,
 				354B5DE42BC8656B0037CE61 /* GoogleService-Info.plist */,
@@ -163,6 +177,7 @@
 		354B5DF02BC8710E0037CE61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				354B5E032BC9A9C00037CE61 /* Components */,
 				354B5DB82BC864810037CE61 /* ContentView.swift */,
 				354B5DF12BC8722D0037CE61 /* HomeView.swift */,
 				354B5DF32BC8764A0037CE61 /* PlayersView.swift */,
@@ -172,15 +187,34 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		354B5DFA2BC878F10037CE61 /* Data */ = {
+		354B5DFA2BC878F10037CE61 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				354B5DFB2BC879170037CE61 /* Rating.swift */,
 				354B5DFF2BC880100037CE61 /* Skill.swift */,
 				354B5DFD2BC87BCD0037CE61 /* Agent.swift */,
 				354B5E012BC886440037CE61 /* Player.swift */,
+				354B5E062BC9ABAE0037CE61 /* Position.swift */,
+				354B5E0D2BC9CCE90037CE61 /* GameState.swift */,
 			);
-			path = Data;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		354B5E032BC9A9C00037CE61 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				354B5E042BC9A9F60037CE61 /* PlayerResume.swift */,
+				354B5E0F2BC9CED90037CE61 /* CreateAgent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		354B5E082BC9B3590037CE61 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				354B5E092BC9B37C0037CE61 /* PlayerViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354B5E0C2BC9C9770037CE61 /* PlayerImages.xcassets in Resources */,
 				354B5DC02BC864820037CE61 /* Preview Assets.xcassets in Resources */,
 				354B5DBD2BC864820037CE61 /* Assets.xcassets in Resources */,
 				354B5DE52BC8656B0037CE61 /* GoogleService-Info.plist in Resources */,
@@ -353,12 +388,17 @@
 				354B5DF82BC876780037CE61 /* SettingsView.swift in Sources */,
 				354B5DF42BC8764A0037CE61 /* PlayersView.swift in Sources */,
 				354B5E002BC880100037CE61 /* Skill.swift in Sources */,
+				354B5E0A2BC9B37C0037CE61 /* PlayerViewModel.swift in Sources */,
 				354B5DFE2BC87BCE0037CE61 /* Agent.swift in Sources */,
 				354B5DB92BC864810037CE61 /* ContentView.swift in Sources */,
+				354B5E072BC9ABAE0037CE61 /* Position.swift in Sources */,
 				354B5DF22BC8722D0037CE61 /* HomeView.swift in Sources */,
 				354B5DBB2BC864810037CE61 /* Item.swift in Sources */,
 				354B5DF62BC876640037CE61 /* CareerView.swift in Sources */,
+				354B5E0E2BC9CCE90037CE61 /* GameState.swift in Sources */,
 				354B5DB72BC864810037CE61 /* FootballAgentApp.swift in Sources */,
+				354B5E052BC9A9F60037CE61 /* PlayerResume.swift in Sources */,
+				354B5E102BC9CED90037CE61 /* CreateAgent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

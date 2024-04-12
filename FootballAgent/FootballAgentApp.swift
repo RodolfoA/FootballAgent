@@ -22,6 +22,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 struct FootballAgentApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
+    init() {
+        
+    }
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
