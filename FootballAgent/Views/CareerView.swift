@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct CareerView: View {
+    
+    @State private var viewModel : AgentViewModel = AgentViewModel()
+    
     var body: some View {
-        Text("Career")
+        Text(viewModel.getAgentName())
     }
 }
 

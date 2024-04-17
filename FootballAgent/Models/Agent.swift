@@ -13,6 +13,7 @@ class Agent : HasSkills {
     var reputation : Int = 0
     var money : Double = 0.0
     var bornDate: Date = Date()
+    var loaded: Bool = false
     
     override init() {
         super.init()
