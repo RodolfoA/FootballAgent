@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import Observation
 
-@Observable
+
+@Observable 
 class PlayerViewModel {
     
     var players : [Player] = []
@@ -51,5 +53,9 @@ class PlayerViewModel {
         players[0].imageName = "playerImage1"
         players[1].imageName = "playerImage2"
         players[2].imageName = "playerImage3"
+        
+        let timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            self.players[0].reputation = Int.random(in: 1...100)
+        }
     }
 }

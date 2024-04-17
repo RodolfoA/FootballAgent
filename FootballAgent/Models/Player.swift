@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import Observation
 
+@Observable
 class Player : HasSkills, Identifiable {
     var name : String = ""
     var nationality : String = ""
