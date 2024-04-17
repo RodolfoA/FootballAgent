@@ -12,8 +12,12 @@ struct DivisionRow: View {
     var tier : Int
     
     var body: some View {
-        (Text(Image(systemName: "\(tier).circle.fill")) + Text (" Division"))
-            .font(.title)
+        HStack {
+            (Text(Image(systemName: "\(tier).circle.fill")) + Text (" Division"))
+                .font(.title)
+                .padding()
+            Spacer()
+        }
     }
 }
 

@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ClubList: View {
+    @State private var viewModel : DivisionViewModel = DivisionViewModel()
+    var tier: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(viewModel.divisions[tier-1].clubs, id: \.id) { club in
+            ClubRow(name: viewModel.getClubName(club: club))
+        }
     }
 }
 
 #Preview {
-    ClubList()
+    ClubList(tier:1)
 }

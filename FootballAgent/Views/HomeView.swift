@@ -8,8 +8,24 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     var body: some View {
-        Text("Home Sweet Home")
+        NavigationView {
+            VStack {
+                Text("Home Sweet Home")
+                Spacer()
+                NavigationLink(destination: DivisionList()) {
+                    (Text(Image(systemName: "trophy.fill")) + Text (" Standings"))
+                        .font(.largeTitle)
+                        .foregroundStyle(.background)
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+                .background(.accent)
+                .cornerRadius(7.0)
+                .padding()
+            }
+        }
     }
 }
 

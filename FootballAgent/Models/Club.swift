@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Club {
+class Club: Identifiable {
     let name: String
     var players: [Player] = []
     

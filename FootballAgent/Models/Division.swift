@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Division {
+class Division: Identifiable {
     let tier: Int
     var clubs: [Club] = []
     

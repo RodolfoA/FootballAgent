@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct DivisionList: View {
+    
+    @State private var viewModel : DivisionViewModel = DivisionViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(viewModel.divisions, id: \.id) { division in
+            NavigationLink {
+                ClubList(tier: division.tier)
+            } label: {
+                DivisionRow(tier: division.tier)
+            }
+        }
     }
 }
 
